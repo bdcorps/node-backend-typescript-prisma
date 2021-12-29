@@ -16,7 +16,7 @@ cors({ credentials: true, origin: true })
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("hello world")
+  res.json({"message": "hello world"})
 })
 
 app.post("/user", async (req, res) => {
