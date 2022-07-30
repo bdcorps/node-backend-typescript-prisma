@@ -2,12 +2,7 @@ import * as dotenv from "dotenv";
 import app from "./app";
 dotenv.config();
 
-
-if (!process.env.PORT) {
-  process.exit(1);
-}
-
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 app.listen(port, () => {
   console.log(`server started at http://localhost:${port}`)
